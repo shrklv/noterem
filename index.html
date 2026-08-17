@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="ru" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Noterem - ремонт ноутбуков в Екатеринбурге</title>
+    <meta
+      name="description"
+      content="Быстрый и качественный ремонт ноутбуков. Диагностика бесплатно, гарантия до 12 месяцев, выезд мастера."
+    />
+    <link rel="icon" type="image/svg+xml" href="img/logoshrt.svg" />
+    <link
+      rel="preload"
+      href="fonts/dinpro.otf"
+      as="font"
+      type="font/otf"
+      crossorigin
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="progress" id="progress"></div>
+
+    <header class="header" id="header">
+      <div class="container header__inner">
+        <a href="#top" class="logo" aria-label="на главную">
+          <svg
+            viewBox="0 0 369.89 53.72"
+            xmlns="http://www.w3.org/2000/svg"
+            role="img"
+            aria-label="NoteRem"
+          >
+            <g fill="currentColor">
+              <path
+                d="M0,.53h7.28l23.11,37.45h.14V.53h7.73v52.68h-7.32L7.87,15.77h-.14v37.45H0V.53Z"
+              />
+              <path
+                d="M41.66,26.55C41.39,2.01,52.58.72,73.88.03c18.56-.72,24.93,10.22,24.2,27.38.59,17.38-6.84,27.18-24.96,26.25-21.36-.75-31.83-2.61-31.46-26.91v-.2ZM49.39,27.49c.04,14.4,4.71,17.89,18.9,18.19,11.4.71,20.82-.55,21.89-14.1.99-14.8-1.23-24.42-18.4-23.59-16.96.05-22.43,1.93-22.39,19.28v.22Z"
+              />
+              <path
+                d="M111.65,7.61h-13.99V.53h35.71v7.08h-13.99v45.6h-7.73V7.61Z"
+              />
+              <path
+                d="M135.76.53h32.6v7.51h-24.87v15.07h21.23v7.08h-21.23v15.51h24.87v7.51h-32.6V.53Z"
+              />
+              <path
+                d="M172.7.53h19.94c4.25,0,7.72,1.16,10.41,3.47,3.23,2.63,4.92,6.37,5.06,11.24-.09,7.15-3.38,12.02-9.85,14.6l11.81,23.38h-9.18l-10.56-22.51h-9.9v22.51h-7.73V.53ZM180.42,23.63h11.72c2.9-.05,5.08-.92,6.53-2.61,1.43-1.57,2.14-3.5,2.14-5.8-.05-2.75-.9-4.75-2.56-5.98-1.31-1.09-3.2-1.63-5.68-1.63h-12.14v16.01Z"
+              />
+              <path
+                d="M213.61.53h32.6v7.51h-24.87v15.07h21.23v7.08h-21.23v15.51h24.87v7.51h-32.6V.53Z"
+              />
+              <path
+                d="M250.55.53h7.28l14.63,34.34L286.81.53h7.31v52.68h-7.73V20.36h-.18l-10.68,25.3h-6.44l-10.68-25.3h-.14v32.85h-7.73V.53Z"
+              />
+              <path d="M301.97,45.7h7.29v7.51h-7.29v-7.51Z" />
+              <path
+                d="M315.28,15.71h7.29v3.97h.15c2.4-2.96,5.56-4.44,9.45-4.44,2.92.05,5.46,1.01,7.63,2.88l-5.33,6.52c-1.54-1.26-3.14-1.88-4.8-1.88-1.87,0-3.47.63-4.8,1.88-1.5,1.23-2.27,3.22-2.31,5.97v22.61h-7.29V15.71Z"
+              />
+              <path
+                d="M340.88,15.71h7.29v22.36c0,2.53.69,4.51,2.07,5.93,1.35,1.42,3.08,2.13,5.18,2.13s3.82-.71,5.15-2.13c1.35-1.42,2.03-3.4,2.03-5.93V15.71h7.29v37.51h-7.29v-4.01h-.14c-2.4,2.96-5.54,4.44-9.41,4.44-3.01-.05-5.72-1.18-8.15-3.39-2.63-2.16-3.98-5.36-4.02-9.59V15.71Z"
+              />
+            </g>
+          </svg>
+        </a>
+
+        <nav class="nav" id="nav" aria-label="Основная навигация">
+          <a href="#services">Услуги</a>
+          <a href="#why">Почему мы</a>
+          <a href="#steps">Этапы</a>
+          <a href="#pricing">Цены</a>
+          <a href="#faq">Вопросы</a>
+          <a href="#contact">Контакты</a>
+        </nav>
+
+        <div class="header__actions">
+          <a href="#contact" class="btn btn--primary btn--sm header__cta"
+            >Вызвать мастера</a
+          >
+          <button
+            class="burger"
+            id="burger"
+            type="button"
+            aria-label="Открыть меню"
+            aria-expanded="false"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- хиро элементы -->
+      <section class="hero">
+        <div class="hero__slides" aria-hidden="true">
+          <div class="hero__slide hero__slide--1"></div>
+          <div class="hero__slide hero__slide--2"></div>
+          <div class="hero__slide hero__slide--3"></div>
+          <div class="hero__shade"></div>
+        </div>
+
+        <div class="container hero__content">
+          <h1 class="hero__title">
+            Ремонт ноутбуков<br />в <span class="accent">Екатеринбурге</span>
+          </h1>
+          <p class="hero__subtitle">
+            Бесплатная диагностика за 30 минут. Чиним ноутбуки любых брендов —
+            Apple, Asus, Lenovo, HP, Dell. Выезд мастера по городу бесплатно.
+          </p>
+          <div class="hero__actions">
+            <a href="#contact" class="btn btn--primary">Оставить заявку</a>
+            <a href="#pricing" class="btn btn--ghost">Смотреть цены</a>
+          </div>
+          <ul class="hero__facts">
+            <li><strong>5+ лет</strong> опыта</li>
+            <li><strong>1500+</strong> клиентов</li>
+            <li><strong>от 24 ч</strong> срок ремонта</li>
+          </ul>
+        </div>
+
+        <a href="#services" class="hero__scroll" aria-label="Прокрутить вниз">
+          <span class="wheel"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="white"
+              class="bi bi-chevron-down"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+              /></svg
+          ></span>
+        </a>
+      </section>
+
+      <!-- услуги -->
+      <section class="section" id="services">
+        <div class="container">
+          <div class="section__head reveal">
+            <h2>Что мы делаем</h2>
+            <p class="section__lead">
+              Самые частые поломки — наша работа. Остальное тоже.
+            </p>
+          </div>
+
+          <div class="grid">
+            <article class="card reveal">
+              <h3>Диагностика</h3>
+              <p>
+                Бесплатная проверка в сервисе. Точная причина поломки и
+                финальная смета до начала работ.
+              </p>
+            </article>
+            <article class="card reveal">
+              <h3>Замена батареи</h3>
+              <p>
+                Подберём оригинальную или совместимую АКБ. Ноутбук снова живёт
+                от 4 до 8 часов без розетки.
+              </p>
+            </article>
+            <article class="card reveal">
+              <h3>Замена клавиатуры</h3>
+              <p>
+                Меняем клавиатуру и тачпад у любых моделей. Разводка, залипания,
+                неработающие клавиши — решаем.
+              </p>
+            </article>
+            <article class="card reveal">
+              <h3>Чистка и термопаста</h3>
+              <p>
+                Ноутбук греется, шумит или выключается? Чистка системы
+                охлаждения и полное обслуживание точно помогут.
+              </p>
+            </article>
+            <article class="card reveal">
+              <h3>Ремонт после залива</h3>
+              <p>
+                Срочная ультразвуковая ванна и восстановление контактов после
+                пролитой жидкости. Действуем быстро.
+              </p>
+            </article>
+            <article class="card reveal">
+              <h3>Апгрейд</h3>
+              <p>
+                Установим SSD, добавим RAM — ноутбук станет заметно быстрее.
+                Подберём комплектующие под бюджет.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- почемумы -->
+      <section class="section section--alt" id="why">
+        <div class="container">
+          <div class="section__head reveal">
+            <h2>Нас выбирают, потому что</h2>
+          </div>
+
+          <div class="stats">
+            <div class="stat reveal">
+              <span class="stat__num" data-count="5" data-suffix="+">0</span>
+              <span class="stat__label">лет опыта</span>
+            </div>
+            <div class="stat reveal">
+              <span class="stat__num" data-count="1500" data-suffix="+">0</span>
+              <span class="stat__label">выполненных ремонтов</span>
+            </div>
+            <div class="stat reveal">
+              <span class="stat__num" data-count="95" data-suffix="%">0</span>
+              <span class="stat__label">клиентов рекомендуют нас</span>
+            </div>
+            <div class="stat reveal">
+              <span class="stat__num" data-count="12" data-suffix=" мес."
+                >0</span
+              >
+              <span class="stat__label">гарантии на работы</span>
+            </div>
+          </div>
+
+          <div class="features">
+            <div class="feature reveal">
+              <div class="feature__tick">✓</div>
+              <div>
+                <h3>Честная смета</h3>
+                <p>
+                  Цена фиксируется до начала работ и не меняется в процессе.
+                </p>
+              </div>
+            </div>
+            <div class="feature reveal">
+              <div class="feature__tick">✓</div>
+              <div>
+                <h3>Оригинальные запчасти</h3>
+                <p>
+                  Работаем с проверенными поставщиками, даём гарантию на детали.
+                </p>
+              </div>
+            </div>
+            <div class="feature reveal">
+              <div class="feature__tick">✓</div>
+              <div>
+                <h3>Выезд мастера</h3>
+                <p>
+                  Если не получается привезти — приедем сами, бесплатно по
+                  городу.
+                </p>
+              </div>
+            </div>
+            <div class="feature reveal">
+              <div class="feature__tick">✓</div>
+              <div>
+                <h3>Скорость</h3>
+                <p>
+                  Более 80% ремонтов занимают один день. Срочные случаи —
+                  быстрее.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- шаги -->
+      <section class="section" id="steps">
+        <div class="container">
+          <div class="section__head reveal">
+            <h2>Как это работает</h2>
+          </div>
+
+          <div class="steps">
+            <div class="step reveal">
+              <span class="step__num">01</span>
+              <h3>Заявка</h3>
+              <p>Оставляете заявку на сайте или звоните — уточняем симптомы.</p>
+            </div>
+            <div class="step reveal">
+              <span class="step__num">02</span>
+              <h3>Диагностика</h3>
+              <p>Бесплатно выясняем причину и согласовываем цену.</p>
+            </div>
+            <div class="step reveal">
+              <span class="step__num">03</span>
+              <h3>Ремонт</h3>
+              <p>Чиним на оригинальных запчастях. Присылаем фотоотчёт.</p>
+            </div>
+            <div class="step reveal">
+              <span class="step__num">04</span>
+              <h3>Выдача</h3>
+              <p>Проверяете работу на месте, получаете гарантию и забираете.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- цены -->
+      <section class="section section--alt" id="pricing">
+        <div class="container">
+          <div class="section__head reveal">
+            <h2>Стартовые цены</h2>
+            <p class="section__lead">
+              Точная стоимость зависит от модели. Диагностика — бесплатно.
+            </p>
+          </div>
+
+          <div class="grid grid--3">
+            <article class="card card--price reveal">
+              <h3>Диагностика</h3>
+              <p class="price">Бесплатно</p>
+              <ul class="price__list">
+                <li>Проверка всех систем</li>
+                <li>Смета до начала работ</li>
+                <li>Бесплатно даже при отказе</li>
+              </ul>
+              <a href="#contact" class="btn btn--outline">Записаться</a>
+            </article>
+            <article class="card card--price card--featured reveal">
+              <p class="card__badge">Популярно</p>
+              <h3>Чистка и термопаста</h3>
+              <p class="price">от 1 500 ₽</p>
+              <ul class="price__list">
+                <li>Разбор и очистка кулера</li>
+                <li>Замена термопасты</li>
+                <li>Продувка от пыли</li>
+              </ul>
+              <a href="#contact" class="btn btn--primary">Записаться</a>
+            </article>
+            <article class="card card--price reveal">
+              <h3>Замена батареи</h3>
+              <p class="price">от 2 500 ₽</p>
+              <ul class="price__list">
+                <li>Проверенные батареи</li>
+                <li>Замена за один день</li>
+                <li>Гарантия 12 месяцев</li>
+              </ul>
+              <a href="#contact" class="btn btn--outline">Записаться</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- вопросответ -->
+      <section class="section" id="faq">
+        <div class="container container--narrow">
+          <div class="section__head reveal">
+            <h2>Частые вопросы</h2>
+          </div>
+
+          <div class="faq">
+            <details class="faq__item reveal">
+              <summary>Сколько времени занимает ремонт?</summary>
+              <p>
+                Большинство ремонтов — 1 рабочий день. Замена батареи или чистка
+                — от 1–3 часов. Сложные случаи, например после залива, — до 3
+                дней. Точный срок называем после диагностики.
+              </p>
+            </details>
+            <details class="faq__item reveal">
+              <summary>Даёте ли вы гарантию?</summary>
+              <p>
+                Да, на все работы — до 12 месяцев, на запчасти — по условиям
+                производителя. Если проблема вернётся в течение гарантийного
+                срока — устраним бесплатно.
+              </p>
+            </details>
+            <details class="faq__item reveal">
+              <summary>Что делать, если ноутбук залили жидкостью?</summary>
+              <p>
+                Сразу выключите его, отсоедините питание и не пытайтесь
+                включать. Привезите в сервис как можно быстрее — чем раньше
+                начнём восстановление, тем больше шансов спасти устройство.
+              </p>
+            </details>
+            <details class="faq__item reveal">
+              <summary>Выезжаете ли вы на дом?</summary>
+              <p>
+                Да, по городу выезд мастера бесплатный. На дому выполняем замену
+                батареи, SSD, клавиатуры и другие несложные работы. Диагностика
+                с разбором — в сервисе.
+              </p>
+            </details>
+            <details class="faq__item reveal">
+              <summary>Можно ли сохранить данные при ремонте?</summary>
+              <p>
+                Перед работами мы делаем резервную копию данных клиента по
+                запросу. Восстановление данных с повреждённых дисков — отдельная
+                услуга.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- контакты -->
+      <section class="section section--alt" id="contact">
+        <div class="container">
+          <div class="section__head reveal">
+            <h2>Оставьте заявку</h2>
+            <p class="section__lead">
+              Перезвоним в течение 15 минут и подскажем, что делать.
+            </p>
+          </div>
+
+          <div class="contact">
+            <form class="form reveal" id="form" novalidate>
+              <label class="field">
+                <span>Ваше имя</span>
+                <input type="text" name="name" placeholder="Иван" required />
+              </label>
+              <label class="field">
+                <span>Телефон</span>
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="+7 (___) ___-__-__"
+                  required
+                />
+              </label>
+              <label class="field">
+                <span>Что случилось?</span>
+                <textarea
+                  name="message"
+                  rows="4"
+                  placeholder="Кратко опишите проблему"
+                ></textarea>
+              </label>
+              <button type="submit" class="btn btn--primary btn--wide">
+                Отправить заявку
+              </button>
+              <p class="form__note" id="formNote" hidden>
+                ✓ Спасибо! Мы свяжемся с вами в ближайшее время.
+              </p>
+            </form>
+
+            <div class="contact__info reveal">
+              <div class="contact__block">
+                <h3>Адрес</h3>
+                <p>г. Екатеринбург, ул. Плейсхолдерная, 15</p>
+              </div>
+              <div class="contact__block">
+                <h3>Телефон</h3>
+                <a href="tel:+70000000000">+7 (900) 000 00 00</a>
+              </div>
+              <div class="contact__block">
+                <h3>Режим работы</h3>
+                <p>Ежедневно, 10:00 — 21:00</p>
+              </div>
+              <div class="contact__block">
+                <h3>Почта</h3>
+                <a href="mailto:hello@noterem.ru">hello@noterem.ru</a>
+              </div>
+              <div class="contact__block">
+                <a href="https://t.me/noterem"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    fill="currentColor"
+                    class="bi bi-telegram"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"
+                    /></svg
+                ></a>
+                <a href="https://whatsapp.com"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    fill="currentColor"
+                    class="bi bi-whatsapp"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"
+                    /></svg
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <a href="#top" class="logo logo--footer" aria-label="NoteRem — наверх">
+          <svg
+            viewBox="0 0 369.89 53.72"
+            xmlns="http://www.w3.org/2000/svg"
+            role="img"
+            aria-label="NoteRem"
+          >
+            <g fill="currentColor">
+              <path
+                d="M0,.53h7.28l23.11,37.45h.14V.53h7.73v52.68h-7.32L7.87,15.77h-.14v37.45H0V.53Z"
+              />
+              <path
+                d="M41.66,26.55C41.39,2.01,52.58.72,73.88.03c18.56-.72,24.93,10.22,24.2,27.38.59,17.38-6.84,27.18-24.96,26.25-21.36-.75-31.83-2.61-31.46-26.91v-.2ZM49.39,27.49c.04,14.4,4.71,17.89,18.9,18.19,11.4.71,20.82-.55,21.89-14.1.99-14.8-1.23-24.42-18.4-23.59-16.96.05-22.43,1.93-22.39,19.28v.22Z"
+              />
+              <path
+                d="M111.65,7.61h-13.99V.53h35.71v7.08h-13.99v45.6h-7.73V7.61Z"
+              />
+              <path
+                d="M135.76.53h32.6v7.51h-24.87v15.07h21.23v7.08h-21.23v15.51h24.87v7.51h-32.6V.53Z"
+              />
+              <path
+                d="M172.7.53h19.94c4.25,0,7.72,1.16,10.41,3.47,3.23,2.63,4.92,6.37,5.06,11.24-.09,7.15-3.38,12.02-9.85,14.6l11.81,23.38h-9.18l-10.56-22.51h-9.9v22.51h-7.73V.53ZM180.42,23.63h11.72c2.9-.05,5.08-.92,6.53-2.61,1.43-1.57,2.14-3.5,2.14-5.8-.05-2.75-.9-4.75-2.56-5.98-1.31-1.09-3.2-1.63-5.68-1.63h-12.14v16.01Z"
+              />
+              <path
+                d="M213.61.53h32.6v7.51h-24.87v15.07h21.23v7.08h-21.23v15.51h24.87v7.51h-32.6V.53Z"
+              />
+              <path
+                d="M250.55.53h7.28l14.63,34.34L286.81.53h7.31v52.68h-7.73V20.36h-.18l-10.68,25.3h-6.44l-10.68-25.3h-.14v32.85h-7.73V.53Z"
+              />
+              <path d="M301.97,45.7h7.29v7.51h-7.29v-7.51Z" />
+              <path
+                d="M315.28,15.71h7.29v3.97h.15c2.4-2.96,5.56-4.44,9.45-4.44,2.92.05,5.46,1.01,7.63,2.88l-5.33,6.52c-1.54-1.26-3.14-1.88-4.8-1.88-1.87,0-3.47.63-4.8,1.88-1.5,1.23-2.27,3.22-2.31,5.97v22.61h-7.29V15.71Z"
+              />
+              <path
+                d="M340.88,15.71h7.29v22.36c0,2.53.69,4.51,2.07,5.93,1.35,1.42,3.08,2.13,5.18,2.13s3.82-.71,5.15-2.13c1.35-1.42,2.03-3.4,2.03-5.93V15.71h7.29v37.51h-7.29v-4.01h-.14c-2.4,2.96-5.54,4.44-9.41,4.44-3.01-.05-5.72-1.18-8.15-3.39-2.63-2.16-3.98-5.36-4.02-9.59V15.71Z"
+              />
+            </g>
+          </svg>
+        </a>
+        <p class="footer__copy">© 2026 ИП Сэмпл П. Х.</p>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
