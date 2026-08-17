@@ -12,16 +12,14 @@
     themeToggle.addEventListener("click", () => {});
   }
 
-  /* ---- линия скролла и шапка ---- */
+  /* ---- шапка ---- */
   const header = document.getElementById("header");
-  const progress = document.getElementById("progress");
   let ticking = false;
 
   const onScroll = () => {
     const y = window.scrollY;
     header.classList.toggle("header--scrolled", y > 20);
     const h = document.documentElement.scrollHeight - window.innerHeight;
-    progress.style.transform = `scaleX(${h > 0 ? y / h : 0})`;
     ticking = false;
   };
 
